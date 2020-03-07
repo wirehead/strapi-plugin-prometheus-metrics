@@ -1,0 +1,32 @@
+{
+  "name": "strapi-plugin-prometheus-metrics",
+  "version": "0.0.1",
+  "description": "A Strapi plugin to add Prometheus metrics",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wirehead/strapi-plugin-prometheus-metrics.git"
+  },
+  "keywords": [
+    "strapi",
+    "prometheus",
+    "metrics"
+  ],
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
+  },
+  "author": "Wirehead <wh-npm@wirewd.com>",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/wirehead/strapi-plugin-prometheus-metrics/issues"
+  },
+  "homepage": "https://github.com/wirehead/strapi-plugin-prometheus-metrics#readme",
+  "dependencies": {
+    "prom-client": "^12.0.0",
+    "prometheus-api-metrics": "^2.2.3"
+  }
+}
