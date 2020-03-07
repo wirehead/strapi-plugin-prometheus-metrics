@@ -1,6 +1,7 @@
 # strapi-plugin-prometheus-metrics
 
-[![CircleCI](https://circleci.com/gh/wirehead/strapi-plugin-prometheus-metrics.svg?style=shield)](https://circleci.com/gh/wirehead/strapi-plugin-prometheus-metrics)[![npm version](https://badge.fury.io/js/strapi-plugin-prometheus-metrics.svg)](https://www.npmjs.com/package/strapi-plugin-prometheus-metrics)[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)
+[![CircleCI](https://circleci.com/gh/wirehead/strapi-plugin-prometheus-metrics.svg?style=shield)](https://circleci.com/gh/wirehead/strapi-plugin-prometheus-metrics)[![npm version](https://badge.fury.io/js/strapi-plugin-prometheus-metrics.svg)](https://www.npmjs.com/package/strapi-plugin-prometheus-metrics)[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)[![Contributor Covenant](https://img.shields.io/badge/license-Hippocratic%20OSL%202.0-4baaaa)](https://firstdonoharm.dev/)
+
 
 Adds Prometheus metrics to a [Strapi](http://strapi.io/) instance using [prometheus-api-metrics](https://github.com/Zooz/prometheus-api-metrics).
 
