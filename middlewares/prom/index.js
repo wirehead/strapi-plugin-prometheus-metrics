@@ -17,7 +17,7 @@ module.exports = strapi => {
       const excludeRoutes = promSettings.excludeRoutes;
       const includeQueryParams = promSettings.includeQueryParams;
 
-      strapi.app.use(apiMetrics({
+      const wrapped = apiMetrics({
         metricsPath,
         defaultMetricsInterval,
         durationBuckets,
@@ -26,7 +26,19 @@ module.exports = strapi => {
         useUniqueHistogramName,
         excludeRoutes,
         includeQueryParams
-      }));
+      });
+
+      strapi.app.use((ctx, next) => {
+        if (ctx.req.url === metricsPath) {
+          return wrapped(ctx,next);
+        } else if (ctx.req.url === `${metricsPath}.json`) {
+          return wrapped(ctx,next);
+        } else if ((ctx.response.status != 404)) {
+          return wrapped(ctx,next);
+        } else {
+          return next();
+        }
+      });
     },
   };
 };

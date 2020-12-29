@@ -20,30 +20,46 @@ npm i strapi-plugin-prometheus-metrics
 
 ## Usage
 
-In the relevant `config/environents/**/middleware.json` add a key that looks like this:
+You need to set the `settings.prom.enabled` key to true and also set a metrics path in `settings.prom.metricsPath`.
+
+If your `config/middleware.js` looks something like this:
 
 ```javascript
-{
-  "prom": {
-    "enabled": true
-  }
-}
-
+module.exports = {
+  settings: {
+  },
+};
 ````
+
+You would want to add 
+
+```javascript
+module.exports = {
+  settings: {
+    "prom": {
+      "enabled": true,
+      "metricsPath": "/metrics",
+    },
+  },
+};
+```
+
 
 ## Configuration:
 
-In the relevant `config/environents/**/middleware.json` you can configure things like so:
+If your `config/middleware.js` you can configure keys like this:
 
 ```javascript
-{
-  "prom": {
-    "enabled": true,
-    "metricsPath": "/metrics"
-  }
-}
-
-````
+module.exports = {
+  settings: {
+    "prom": {
+      "enabled": true,
+      "metricsPath": "/metrics",
+      "metricsPrefix": "foo"
+    },
+  },
+};
+```
 
 Keys you can set are:
 
@@ -66,8 +82,6 @@ Also, if you aren't careful with the includeQueryParams feature, it might leak m
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
 
 ## Code of conduct
 

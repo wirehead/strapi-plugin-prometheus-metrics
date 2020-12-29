@@ -1,6 +1,6 @@
 {
   "name": "strapi-plugin-prometheus-metrics",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A Strapi plugin to add Prometheus metrics",
   "main": "index.js",
   "scripts": {
@@ -27,6 +27,6 @@
   "homepage": "https://github.com/wirehead/strapi-plugin-prometheus-metrics#readme",
   "dependencies": {
     "prom-client": "^12.0.0",
-    "prometheus-api-metrics": "^2.2.3"
+    "prometheus-api-metrics": "^3.1.0"
   }
 }
