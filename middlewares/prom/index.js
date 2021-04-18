@@ -24,6 +24,7 @@ module.exports = strapi => {
         requestSizeBuckets,
         responseSizeBuckets,
         useUniqueHistogramName,
+        metricsPrefix,
         excludeRoutes,
         includeQueryParams
       });
